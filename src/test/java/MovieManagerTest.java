@@ -119,5 +119,15 @@ public class MovieManagerTest {
         String[] expected = {"Invisible Man", "Number one", "Trolls", "Gentelments", "Hotel Belgrad"};
         Assertions.assertArrayEquals(expected, actual);
     }
+    @Test
+    public void test9() {
+        MovieManager manager = new MovieManager();
+
+        manager.add("Bloodshot");
+
+        String[] actual = manager.findLast();
+        String[] expected = {"Bloodshot"};
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }
 
